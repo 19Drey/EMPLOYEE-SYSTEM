@@ -5,11 +5,11 @@ import java.util.Scanner;
 public class MainSystem {
 
     public static void main(String[] args) {
-        // Start the main menu loop
+        
         mainMenu();
     }
 
-    // Main Menu Method
+   
     public static void mainMenu() {
         Scanner sc = new Scanner(System.in);
         String response;
@@ -23,16 +23,16 @@ public class MainSystem {
             int mainAction = sc.nextInt();
 
             if (mainAction == 1) {
-                // Call the Employee Information System
+                
                 EmployeeS employeeSystem = new EmployeeS();
                 employeeSystem.EmployeeInfo();
             } else if (mainAction == 2) {
-                // Call the Employee Time Record System
+               
                 Employee employeeTimeSystem = new Employee();
                 employeeTimeSystem.EmployeeTime();
             } else if (mainAction == 3) {
                 System.out.println("Exiting the system. Thank you!");
-                return;  // Exit the program
+                return; 
             } else {
                 System.out.println("Invalid option. Please try again.");
             }
