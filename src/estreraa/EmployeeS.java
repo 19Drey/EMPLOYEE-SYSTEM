@@ -8,8 +8,7 @@ public void EmployeeInfo() {
         Scanner sc = new Scanner(System.in);
         String response;
 
-        EmployeeSystem system = new EmployeeSystem(); // Create an instance of EmployeeSystem for CRUD operations
-
+        EmployeeSystem system = new EmployeeSystem();
         do {
             System.out.println("Employee Management System:");
             System.out.println("1. ADD EMPLOYEE");
@@ -22,16 +21,16 @@ public void EmployeeInfo() {
             
             switch (action) {
                 case 1:
-                    addEmployee();  // Call the add employee method
+                    addEmployee(); 
                     break;
                 case 2:
-                    viewEmployees(); // Call the view employees method
+                    viewEmployees();
                     break;
                 case 3:
-                    updateEmployee(); // Call the update employee method
+                    updateEmployee();
                     break;
                 case 4:
-                    deleteEmployee(); // Call the delete employee method
+                    deleteEmployee();
                     break;
                 case 5:
                     mainMenu();
@@ -48,7 +47,6 @@ public void EmployeeInfo() {
         System.out.println("Thank you for using the Employee Management System!");
     }
 
-    // Add a new employee record
     public void addEmployee() {
         Scanner sc = new Scanner(System.in);
         config conf = new config();
@@ -70,7 +68,6 @@ public void EmployeeInfo() {
         conf.addRecord(sql, firstName, lastName, email, deptId);
     }
 
-    // View all employee records
     public void viewEmployees() {
         config conf = new config();
         String qry = "SELECT * from Employee";
@@ -80,7 +77,6 @@ public void EmployeeInfo() {
         conf.viewRecords(qry, hdrs, clmn);
     }
 
-    // Update an employee record
     public void updateEmployee() {
         Scanner sc = new Scanner(System.in);
 
@@ -105,7 +101,6 @@ public void EmployeeInfo() {
         conf.updateRecord(qry, newFirstName, newLastName, newEmail, newDeptId, empId);
     }
 
-    // Delete an employee record
     public void deleteEmployee() {
         Scanner sc = new Scanner(System.in);
 
